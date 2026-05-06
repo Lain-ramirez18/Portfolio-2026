@@ -1,0 +1,124 @@
+:root {
+    --md-primary: #D0BCFF;
+    --md-on-primary: #381E72;
+    --md-bg: #141218;
+    --md-on-bg: #E6E1E5;
+    --md-surface: #211F26;
+    --radius: 24px;
+}
+
+[data-theme="light"] {
+    --md-primary: #6750A4;
+    --md-on-primary: #FFFFFF;
+    --md-bg: #FEF7FF;
+    --md-on-bg: #1D1B20;
+    --md-surface: #E8DEF8;
+}
+
+body {
+    background-color: var(--md-bg);
+    color: var(--md-on-bg);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s ease;
+}
+
+.md3-navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    background: rgba(20, 18, 24, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.logo span { color: var(--md-primary); }
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Efecto Antigravedad */
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(1deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.profile-frame {
+    width: 220px;
+    height: 220px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin: 0 auto 2rem;
+    border: 4px solid var(--md-primary);
+    animation: float 6s ease-in-out infinite;
+}
+
+.profile-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.md3-btn {
+    background: var(--md-primary);
+    color: var(--md-on-primary);
+    padding: 0.8rem 2rem;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.md3-btn:hover {
+    transform: scale(1.05);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 2rem;
+}
+
+.project-card {
+    background: var(--md-surface);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.contact-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.contact-item {
+    color: var(--md-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
