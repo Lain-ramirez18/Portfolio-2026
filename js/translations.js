@@ -11,12 +11,12 @@ const translations = {
     },
     en: {
         "hero-title": "Software Developer & Analyst",
-        "hero-subtitle": "Building logical and efficient solutions from Bogotá.",
-        "cta-main": "Let's Chat!",
+        "hero-subtitle": "Engineering logical and efficient solutions from Bogotá.",
+        "cta-main": "Get in Touch",
         "projects-title": "Featured Projects",
         "appfocus-desc": "Optimized activity planner and organizer.",
         "porassit-desc": "Smart assistant for task management.",
         "middleware-desc": "Real-time diagnostic dashboard with Python backend.",
-        "contact-title": "Get in touch"
+        "contact-title": "Contact"
     }
 };
