@@ -1,10 +1,13 @@
 // Theme Toggle Logic
 const themeToggle = document.getElementById('theme-toggle');
+// Initialize icon based on default 'light' theme
+themeToggle.textContent = '🌙';
+
 themeToggle.addEventListener('click', () => {
     const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
     document.documentElement.setAttribute('data-theme', newTheme);
-    themeToggle.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+    themeToggle.textContent = newTheme === 'light' ? '🌙' : '☀️';
 });
 
 // Language Toggle Logic
