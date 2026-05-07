@@ -18,7 +18,7 @@ const updateTranslations = () => {
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translations[locale][key]) {
-            element.textContent = translations[locale][key];
+            element.innerHTML = translations[locale][key];
         }
     });
 };
@@ -51,7 +51,7 @@ document.addEventListener('mousemove', (e) => {
 
 // Reveal on Scroll Effect
 const revealOnScroll = () => {
-    const revealElements = document.querySelectorAll('.timeline-item, .skill-card, .project-card, .testimonial-card');
+    const revealElements = document.querySelectorAll('.experience-item, .skill-tag, .project-card, .testimonial-card');
     const triggerBottom = window.innerHeight * 0.9;
     
     revealElements.forEach(el => {
@@ -68,7 +68,7 @@ const revealOnScroll = () => {
 };
 
 // Set initial styles for reveal
-document.querySelectorAll('.timeline-item, .skill-card, .project-card, .testimonial-card').forEach(el => {
+document.querySelectorAll('.experience-item, .skill-tag, .project-card, .testimonial-card').forEach(el => {
     el.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';

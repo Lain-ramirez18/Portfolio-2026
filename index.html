@@ -66,11 +66,7 @@
                     <img src="assets/img/profile.jpg" alt="Retrato de Lain Sthid Ramirez Rueda" id="profile-img">
                 </div>
                 <h1 id="hero-title" data-i18n="hero-title">Arquitecto de Experiencias Digitales</h1>
-                <p data-i18n="hero-subtitle">Analista y Desarrollador de Software en el SENA. Especialista en arquitecturas Full-stack, elicitación de requisitos y diseño de interfaces de alto impacto.</p>
-                <div class="cta-group">
-                    <a href="#contact" class="md3-btn primary" data-i18n="cta-main">Impulsemos tu visión</a>
-                    <a href="#projects" class="md3-btn secondary" data-i18n="cta-view-projects">Ver Proyectos</a>
-                </div>
+                <p class="hero-subtitle" data-i18n="hero-subtitle">Analista y Desarrollador de Software en el SENA. Especialista en arquitecturas Full-stack, elicitación de requisitos y diseño de interfaces de alto impacto.</p>
             </div>
         </section>
 
@@ -86,24 +82,24 @@
         <section id="experience" aria-labelledby="exp-title">
             <div class="container">
                 <h2 id="exp-title" data-i18n="exp-title">Experiencia y Educación</h2>
-                <div class="experience-timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-year" data-i18n="exp-1-year">2026 - Presente</div>
-                        <div class="timeline-content">
+                <div class="experience-grid">
+                    <div class="experience-item card-modern">
+                        <div class="item-badge" data-i18n="exp-1-year">2026 - Presente</div>
+                        <div class="item-content">
                             <h3 data-i18n="exp-1-title">Analista de Software (SENA)</h3>
                             <p data-i18n="exp-1-desc">Especialización en elicitación de requisitos y arquitectura de sistemas.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year" data-i18n="exp-2-year">2025 - Presente</div>
-                        <div class="timeline-content">
+                    <div class="experience-item card-modern">
+                        <div class="item-badge" data-i18n="exp-2-year">2025 - Presente</div>
+                        <div class="item-content">
                             <h3 data-i18n="exp-2-title">Desarrollador Full-stack</h3>
                             <p data-i18n="exp-2-desc">Creación de soluciones integrales y escalables.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year" data-i18n="exp-3-year">2025</div>
-                        <div class="timeline-content">
+                    <div class="experience-item card-modern">
+                        <div class="item-badge" data-i18n="exp-3-year">2025</div>
+                        <div class="item-content">
                             <h3 data-i18n="exp-3-title">Especialista en Diseño UI/UX</h3>
                             <p data-i18n="exp-3-desc">Certificaciones en diseño centrado en el usuario y accesibilidad.</p>
                         </div>
@@ -118,50 +114,35 @@
                 <h2 id="skills-title" data-i18n="skills-title">Aptitudes & Herramientas</h2>
                 <div class="skills-categories">
                     <div class="skill-category">
-                        <h3 data-i18n="skills-cat-frontend">Frontend & UI</h3>
-                        <div class="skill-grid">
-                            <div class="skill-card">
-                                <span class="skill-icon">HTML</span>
-                                <span data-i18n="skill-html">Living Standard</span>
-                            </div>
-                            <div class="skill-card">
-                                <span class="skill-icon">CSS</span>
-                                <span data-i18n="skill-css">Material Design 3</span>
-                            </div>
-                            <div class="skill-card">
-                                <span class="skill-icon">⚛️</span>
-                                <span data-i18n="skill-react">React.js</span>
-                            </div>
+                        <div class="category-header">
+                            <span class="category-icon">🎨</span>
+                            <h3 data-i18n="skills-cat-frontend">Frontend & UI</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML <b>Living Standard</b></span>
+                            <span class="skill-tag">CSS <b>Material Design 3</b></span>
+                            <span class="skill-tag">⚛️ <b>React.js</b></span>
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h3 data-i18n="skills-cat-backend">Backend & Lógica</h3>
-                        <div class="skill-grid">
-                            <div class="skill-card">
-                                <span class="skill-icon">🐍</span>
-                                <span data-i18n="skill-python">Python (Flask)</span>
-                            </div>
-                            <div class="skill-card">
-                                <span class="skill-icon">🟢</span>
-                                <span data-i18n="skill-nodejs">Node.js</span>
-                            </div>
-                            <div class="skill-card">
-                                <span class="skill-icon">📋</span>
-                                <span data-i18n="skill-req">Elicitación Requisitos</span>
-                            </div>
+                        <div class="category-header">
+                            <span class="category-icon">⚙️</span>
+                            <h3 data-i18n="skills-cat-backend">Backend & Lógica</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">🐍 <b>Python (Flask)</b></span>
+                            <span class="skill-tag">🟢 <b>Node.js</b></span>
+                            <span class="skill-tag">📋 <b>Elicitación de Requisitos</b></span>
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h3 data-i18n="skills-cat-ai">Ecosistema IA</h3>
-                        <div class="skill-grid">
-                            <div class="skill-card">
-                                <span class="skill-icon">🤖</span>
-                                <span data-i18n="skill-prompt">Prompt Eng.</span>
-                            </div>
-                            <div class="skill-card">
-                                <span class="skill-icon">⚡</span>
-                                <span data-i18n="skill-ai-opt">Automatización</span>
-                            </div>
+                        <div class="category-header">
+                            <span class="category-icon">🧠</span>
+                            <h3 data-i18n="skills-cat-ai">Ecosistema IA</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">🤖 <b>Prompt Engineering Avanzado</b></span>
+                            <span class="skill-tag">⚡ <b>Automatización:</b> Claude, Gemini, GPT, Deepseek, Grok</span>
                         </div>
                     </div>
                 </div>
@@ -175,7 +156,7 @@
                 <div class="projects-grid">
                     <article class="project-card">
                         <div class="project-img">
-                            <img src="assets/img/colores.png" alt="APPFOCUS Preview">
+                            <img src="assets/img/APPFOCUS.png" alt="APPFOCUS Preview">
                         </div>
                         <div class="project-content">
                             <h3>APPFOCUS (CORE v3.0)</h3>
@@ -192,7 +173,7 @@
                     </article>
                     <article class="project-card">
                         <div class="project-img">
-                            <img src="assets/img/Mockup v1.png" alt="ProAssist Preview">
+                            <img src="assets/img/Proassits.png" alt="ProAssist Preview">
                         </div>
                         <div class="project-content">
                             <h3>ProAssist</h3>
