@@ -195,12 +195,12 @@ h1 {
     box-shadow: 0 15px 30px var(--glow);
 }
 
-/* About and Skills Sections */
-.about-section, .skills-section {
+/* About, Qualities and Skills Sections */
+.about-section, .qualities-section, .skills-section {
     padding: 6rem 0;
 }
 
-.about-section h2, .skills-section h2, .projects-section h2, .contact-section h2 {
+.about-section h2, .qualities-section h2, .skills-section h2, .projects-section h2, .contact-section h2 {
     font-size: 2.5rem;
     font-weight: 900;
     margin-bottom: 3rem;
@@ -210,6 +210,30 @@ h1 {
 .about-section p {
     font-size: 1.2rem;
     max-width: 900px;
+}
+
+.qualities-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.qualities-list li {
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.1rem;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+
+.qualities-list li:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .skills-grid {
