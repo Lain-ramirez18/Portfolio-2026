@@ -352,7 +352,33 @@ h1 {
 }
 
 @media (max-width: 768px) {
-    .projects-grid { grid-template-columns: 1fr; }
-    .project-content { padding: 2rem; }
-    .footer-socials { gap: 1rem; }
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .hero-section {
+        padding: 6rem 0;
+    }
+
+    .experience-grid,
+    .skills-categories,
+    .projects-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .project-content {
+        padding: 2rem;
+    }
+
+    .footer-socials {
+        gap: 1rem;
+    }
+
+    .footer-socials a {
+        width: 100%;
+        justify-content: center;
+    }
 }
