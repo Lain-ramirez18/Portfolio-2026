@@ -6,7 +6,7 @@
     <title>Lain Sthid Ramirez Rueda | Arquitecto de Experiencias Digitales</title>
     
     <meta name="description" content="Portafolio profesional de Lain Sthid Ramirez Rueda, Analista y Desarrollador de Software en el SENA. Especialista en HTML Living Standard y CSS (Material Design 3).">
-    <meta name="keywords" content="Lain Sthid Ramirez Rueda, SENA, Software Development, HTML Living Standard, Material Design 3, UX/UI, Accessibility, Node.js, React">
+    <meta name="keywords" content="Lain Sthid Ramirez Rueda, SENA, Software Development, HTML Living Standard, Material Design 3, UX/UI, Accessibility, Node.js, React, TypeScript">
     <link rel="canonical" href="https://yourdomain.com/">
 
     <!-- Open Graph / Facebook -->
@@ -42,7 +42,7 @@
     </script>
 
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -50,10 +50,10 @@
 
     <header role="banner">
         <nav class="md3-navbar" aria-label="Navegación principal">
-            <div class="nav-container">
-                <span class="logo" aria-hidden="true">Lain Sthid Ramirez Rueda<span>.</span></span>
+            <div class="container nav-container">
+                <span class="logo" aria-hidden="true">LAIN STHID RAMIREZ RUEDA<span>.</span></span>
                 <div class="nav-controls">
-                    <button id="lang-toggle" aria-label="Cambiar idioma a Inglés" title="Switch Language">EN</button>
+                    <button id="lang-toggle" aria-label="Cambiar idioma" title="Switch Language">🌐</button>
                     <button id="theme-toggle" aria-label="Cambiar modo visual" title="Toggle Visual Mode">🌙</button>
                 </div>
             </div>
@@ -61,94 +61,204 @@
     </header>
 
     <main id="main-content">
+        <!-- Hero Section -->
         <section class="hero-section" aria-labelledby="hero-title">
-            <div class="hero-content">
+            <div class="container">
                 <div class="profile-frame antigravity" data-speed="4">
                     <img src="assets/img/profile.jpg" alt="Retrato de Lain Sthid Ramirez Rueda" id="profile-img">
                 </div>
-                <h1 id="hero-title" data-i18n="hero-title" class="antigravity" data-speed="2">Arquitecto de Experiencias Digitales</h1>
-                <p data-i18n="hero-subtitle" class="antigravity" data-speed="1">Estudiante de Análisis y Desarrollo de Software en el SENA. Transformando lógica compleja en interfaces fluidas bajo el estándar HTML Living Standard y CSS (Material Design 3).</p>
+                <h1 id="hero-title" data-i18n="hero-title">Arquitecto de Experiencias Digitales</h1>
+                <p data-i18n="hero-subtitle">Estudiante de Análisis y Desarrollo de Software en el SENA. Transformando lógica compleja en interfaces fluidas y experiencias de usuario excepcionales bajo el estándar HTML Living Standard y CSS (Material Design 3). Apasionado por el front-end y la innovación tecnológica.</p>
                 <div class="cta-group">
-                    <a href="#contact" class="md3-btn" data-i18n="cta-main">Impulsemos tu visión</a>
+                    <a href="#contact" class="md3-btn primary" data-i18n="cta-main">Impulsemos tu visión</a>
+                    <a href="#projects" class="md3-btn secondary" data-i18n="cta-view-projects">Ver Proyectos</a>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="about-section" aria-labelledby="about-title">
+        <!-- About Section -->
+        <section id="about" aria-labelledby="about-title">
             <div class="container">
                 <h2 id="about-title" data-i18n="about-title">Sobre mí</h2>
-                <p data-i18n="about-text">Como Analista y Desarrollador de Software en formación en el SENA, me especializo en crear ecosistemas digitales que equilibran la robustez técnica con una experiencia de usuario impecable. Mi enfoque se basa en el aprendizaje continuo y la disciplina técnica, certificado con excelencia en desarrollo front-end.</p>
+                <p class="about-text" data-i18n="about-text">Como Analista y Desarrollador de Software en formación en el SENA, me especializo en crear ecosistemas digitales que equilibran la robustez técnica con una experiencia de usuario impecable. Mi enfoque se basa en el aprendizaje continuo, la excelencia en el desarrollo front-end y la integración de principios de diseño UI/UX. Poseo un firme compromiso con la disciplina técnica y la innovación.</p>
             </div>
         </section>
 
-        <section id="qualities" class="qualities-section" aria-labelledby="qualities-title">
+        <!-- Experience & Education -->
+        <section id="experience" aria-labelledby="exp-title">
             <div class="container">
-                <h2 id="qualities-title" data-i18n="qualities-title">Cualidades Profesionales</h2>
-                <ul class="qualities-list">
-                    <li data-i18n="quality-1">Pensamiento Analítico: Capacidad para desglosar problemas complejos en soluciones técnicas eficientes.</li>
-                    <li data-i18n="quality-2">Disciplina y Autogestión: Compromiso con la excelencia y el aprendizaje autodidacta constante.</li>
-                    <li data-i18n="quality-3">Colaboración Ágil: Adaptabilidad en entornos de trabajo dinámicos bajo metodologías Scrum.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="skills" class="skills-section" aria-labelledby="skills-title">
-            <div class="container">
-                <h2 id="skills-title" data-i18n="skills-title">Aptitudes & Herramientas</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <span class="skill-icon" aria-hidden="true">💻</span>
-                        <span data-i18n="skills-frontend">Frontend: HTML Living Standard, CSS (Material Design 3), React, TypeScript</span>
+                <h2 id="exp-title" data-i18n="exp-title">Experiencia y Educación</h2>
+                <div class="experience-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year" data-i18n="exp-1-year">2024 - Presente</div>
+                        <div class="timeline-content">
+                            <h3 data-i18n="exp-1-title">Desarrollador Front-end (Freelance)</h3>
+                            <p data-i18n="exp-1-desc">Proyectos en React y TypeScript.</p>
+                        </div>
                     </div>
-                    <div class="skill-item">
-                        <span class="skill-icon" aria-hidden="true">⚙️</span>
-                        <span data-i18n="skills-backend">Backend & Lógica: Node.js, JavaScript Moderno, Arquitectura de Software</span>
+                    <div class="timeline-item">
+                        <div class="timeline-year" data-i18n="exp-2-year">2023 - Presente</div>
+                        <div class="timeline-content">
+                            <h3 data-i18n="exp-2-title">Análisis y Desarrollo de Software - SENA</h3>
+                            <p data-i18n="exp-2-desc">Formación en desarrollo full-stack y metodologías ágiles.</p>
+                        </div>
                     </div>
-                    <div class="skill-item">
-                        <span class="skill-icon" aria-hidden="true">🤖</span>
-                        <span data-i18n="skills-ai">Ecosistema IA: Prompt Engineering avanzado, optimización de flujos con GPT-4 y Gemini</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-icon" aria-hidden="true">🛠️</span>
-                        <span data-i18n="skills-tools">Entorno: Git, GitHub, Docker, Figma, VS Code, Vercel</span>
+                    <div class="timeline-item">
+                        <div class="timeline-year" data-i18n="exp-3-year">2022 - 2023</div>
+                        <div class="timeline-content">
+                            <h3 data-i18n="exp-3-title">Estudios en Diseño UI/UX</h3>
+                            <p data-i18n="exp-3-desc">Certificaciones en diseño centrado en el usuario.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="projects-section" aria-labelledby="projects-title">
+        <!-- Skills Section -->
+        <section id="skills" aria-labelledby="skills-title">
+            <div class="container">
+                <h2 id="skills-title" data-i18n="skills-title">Aptitudes & Herramientas</h2>
+                <div class="skills-categories">
+                    <div class="skill-category">
+                        <h3 data-i18n="skills-cat-frontend">Frontend</h3>
+                        <div class="skill-grid">
+                            <div class="skill-card">
+                                <span class="skill-icon">📦</span>
+                                <span data-i18n="skill-html">HTML</span>
+                            </div>
+                            <div class="skill-card">
+                                <span class="skill-icon">🎨</span>
+                                <span data-i18n="skill-css">CSS (M3)</span>
+                            </div>
+                            <div class="skill-card">
+                                <span class="skill-icon">⚛️</span>
+                                <span data-i18n="skill-react">React</span>
+                            </div>
+                            <div class="skill-card">
+                                <span class="skill-icon">🌊</span>
+                                <span data-i18n="skill-tailwind">Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-i18n="skills-cat-backend">Backend & Lógica</h3>
+                        <div class="skill-grid">
+                            <div class="skill-card">
+                                <span class="skill-icon">🟢</span>
+                                <span data-i18n="skill-nodejs">Node.js</span>
+                            </div>
+                            <div class="skill-card">
+                                <span class="skill-icon">📜</span>
+                                <span data-i18n="skill-js">JS Moderno</span>
+                            </div>
+                            <div class="skill-card">
+                                <span class="skill-icon">🚂</span>
+                                <span data-i18n="skill-express">Express.js</span>
+                            </div>
+                            <div class="skill-card">
+                                <span class="skill-icon">🏗️</span>
+                                <span data-i18n="skill-arch">Arquitectura</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-i18n="skills-cat-ai">Ecosistema IA</h3>
+                        <div class="skill-grid">
+                            <div class="skill-card">
+                                <span class="skill-icon">🧠</span>
+                                <span data-i18n="skill-prompt">Prompt Eng.</span>
+                            </div>
+                            <div class="skill-card">
+                                <span class="skill-icon">✨</span>
+                                <span data-i18n="skill-ai-opt">AI Opt.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-i18n="skills-cat-tools">Entorno</h3>
+                        <div class="skill-grid">
+                            <div class="skill-card"><span class="skill-icon">🐙</span><span>Git</span></div>
+                            <div class="skill-card"><span class="skill-icon">🐳</span><span>Docker</span></div>
+                            <div class="skill-card"><span class="skill-icon">💎</span><span>Figma</span></div>
+                            <div class="skill-card"><span class="skill-icon">🚀</span><span>Vercel</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" aria-labelledby="projects-title">
             <div class="container">
                 <h2 id="projects-title" data-i18n="projects-title">Portafolio de Proyectos</h2>
                 <div class="projects-grid">
-                    <article class="project-card antigravity" data-speed="1.5">
-                        <h3>APPFOCUS</h3>
-                        <p data-i18n="appfocus-desc">Planificador de actividades diseñado para la organización de alto rendimiento y la gestión optimizada del tiempo.</p>
+                    <article class="project-card">
+                        <div class="project-img">APPFOCUS</div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">MongoDB</span>
+                            </div>
+                            <p data-i18n="appfocus-desc">Planificador de actividades diseñado para la organización de alto rendimiento y la gestión optimizada del tiempo.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link" data-i18n="project-view-live">Ver en vivo</a>
+                                <a href="#" class="project-link" data-i18n="project-view-code">Código Fuente</a>
+                            </div>
+                        </div>
                     </article>
-                    <article class="project-card antigravity" data-speed="1.5">
-                        <h3>Porassit</h3>
-                        <p data-i18n="porassit-desc">Asistente inteligente desarrollado para cerrar la brecha entre tareas complejas y eficiencia cognitiva.</p>
+                    <article class="project-card">
+                        <div class="project-img">Porassit</div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">OpenAI API</span>
+                                <span class="tag">Docker</span>
+                            </div>
+                            <p data-i18n="porassit-desc">Asistente inteligente desarrollado para cerrar la brecha entre tareas complejas y eficiencia cognitiva.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link" data-i18n="project-view-live">Ver en vivo</a>
+                                <a href="#" class="project-link" data-i18n="project-view-code">Código Fuente</a>
+                            </div>
+                        </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact-section" aria-labelledby="contact-title">
+        <!-- Testimonials -->
+        <section id="testimonials" aria-labelledby="testimonials-title">
             <div class="container">
-                <h2 id="contact-title" data-i18n="contact-title">Transformemos ideas en soluciones</h2>
-                <p data-i18n="contact-subtitle">¿Buscas un desarrollador comprometido con la calidad y la innovación? Conectemos.</p>
-                <div class="contact-links">
-                    <a href="https://wa.me/573209735859?text=Buen%20d%C3%ADa%20Lain" class="contact-item" target="_blank" aria-label="Contactar por WhatsApp">WhatsApp</a>
-                    <a href="mailto:lainramirez18@gmail.com" class="contact-item" aria-label="Enviar un correo electrónico">Email</a>
-                    <a href="https://www.linkedin.com/in/lain-sthid-ramirez-rueda" class="contact-item" target="_blank" aria-label="Visitar perfil de LinkedIn">LinkedIn</a>
-                    <a href="https://github.com/Lain-ramirez18" class="contact-item" target="_blank" aria-label="Ver proyectos en GitHub">GitHub</a>
+                <h2 id="testimonials-title" data-i18n="testimonials-title">Testimonios</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p data-i18n="test-1-text">Lain es un profesional excepcional. Su capacidad para traducir requisitos complejos en soluciones elegantes y funcionales es impresionante.</p>
+                        <span data-i18n="test-1-author">- Cliente A</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <p data-i18n="test-2-text">Trabajar con Lain fue una excelente experiencia. Su enfoque en la calidad y el detalle en el front-end es notable.</p>
+                        <span data-i18n="test-2-author">- Compañero B</span>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="main-footer" role="contentinfo">
+    <!-- Footer & Contact -->
+    <footer class="contact-footer" id="contact" role="contentinfo">
         <div class="container">
-            <p>&copy; 2026 Lain Sthid Ramirez Rueda. Todos los derechos reservados.</p>
+            <h2 data-i18n="contact-title">Transformemos ideas en soluciones</h2>
+            <p data-i18n="contact-subtitle">¿Buscas un desarrollador comprometido con la calidad y la innovación? Conectemos.</p>
+            <a href="#" class="md3-btn primary" data-i18n="cta-work-together" style="margin-top: 2rem;">Let's Work Together</a>
+            
+            <div class="footer-socials">
+                <a href="https://wa.me/573209735859" target="_blank">WhatsApp</a>
+                <a href="mailto:lainramirez18@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/lain-sthid-ramirez-rueda" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Lain-ramirez18" target="_blank">GitHub</a>
+            </div>
+            
+            <p class="copyright">&copy; 2026 Lain Sthid Ramirez Rueda. Todos los derechos reservados.</p>
         </div>
     </footer>
 
