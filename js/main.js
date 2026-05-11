@@ -99,6 +99,7 @@ const NavManager = (() => {
   const hamburger = $('#hamburger');
   const navLinks  = $('#nav-links');
   const links     = $$('.nav-link');
+  const bbItems   = $$('.bb-item');
   const sections  = $$('section[id]');
 
   function highlight() {
@@ -106,8 +107,13 @@ const NavManager = (() => {
     sections.forEach(s => {
       if (window.scrollY >= s.offsetTop - 130) current = s.id;
     });
+    
     links.forEach(l => {
       l.classList.toggle('active', l.getAttribute('href') === `#${current}`);
+    });
+
+    bbItems.forEach(item => {
+      item.classList.toggle('active', item.getAttribute('href') === `#${current}`);
     });
   }
 
@@ -136,6 +142,10 @@ const NavManager = (() => {
       }
 
       links.forEach(l => l.addEventListener('click', closeMenu));
+      bbItems.forEach(item => item.addEventListener('click', () => {
+        bbItems.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+      }));
       
       // Close menu when clicking outside
       document.addEventListener('click', (e) => {
@@ -147,7 +157,7 @@ const NavManager = (() => {
   };
 })();
 
-/* ══════════════ 5. CUSTOM CURSOR (Lerp effect) ══════════════ */
+/* ══════════════ 5. CUSTOM CURSOR (Accelerated) ══════════════ */
 const CursorManager = (() => {
   const cursor = $('#cursor');
   const follower = $('#cursor-follower');
@@ -169,10 +179,10 @@ const CursorManager = (() => {
         cursor.style.top = `${mouseY}px`;
       });
 
-      // Smooth lerp for the follower ring
+      // Faster lerp for the follower ring (0.3 instead of 0.15)
       const render = () => {
-        followerX += (mouseX - followerX) * 0.15;
-        followerY += (mouseY - followerY) * 0.15;
+        followerX += (mouseX - followerX) * 0.3;
+        followerY += (mouseY - followerY) * 0.3;
         
         follower.style.left = `${followerX}px`;
         follower.style.top = `${followerY}px`;
@@ -182,7 +192,7 @@ const CursorManager = (() => {
       render();
 
       // Hover effects
-      const interactives = $$('a, button, .project-card, .soft-card, .about-card');
+      const interactives = $$('a, button, .project-card, .soft-card, .about-card, .offer-card');
       interactives.forEach(el => {
         el.addEventListener('mouseenter', () => {
           cursor.classList.add('cursor--hover');
@@ -206,7 +216,7 @@ const RevealManager = (() => {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('active');
+            entry.target.classList.add('visible');
           }
         });
       }, { threshold: 0.12 });
@@ -234,6 +244,19 @@ function updateYear() {
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 }
 
+function initBackToTop() {
+  const btn = $('#back-to-top');
+  if (!btn) return;
+  
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 500);
+  });
+  
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
 /* ══════════════ INIT ALL ══════════════ */
 document.addEventListener('DOMContentLoaded', () => {
   ThemeManager.init();
@@ -242,5 +265,6 @@ document.addEventListener('DOMContentLoaded', () => {
   NavManager.init();
   CursorManager.init();
   RevealManager.init();
+  initBackToTop();
   updateYear();
 });
